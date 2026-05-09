@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-pacific-blue: #5C9EAD;
+  --color-blue-slate: #326273;
+  --color-tangerine: #E39774;
+  --color-platinum: #EEEEEE;
+  --color-white: #FFFFFF;
+
+  --color-dark-bg: #1A313C; /* derived from 326273 */
+  --color-dark-surface: #22414F;
+
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@custom-variant dark (&:is(.dark *));
+
+@layer base {
+  body {
+    @apply bg-platinum text-blue-slate dark:bg-[#152B36] dark:text-platinum font-sans antialiased transition-colors duration-300;
+  }
+}
